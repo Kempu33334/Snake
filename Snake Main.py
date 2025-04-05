@@ -37,32 +37,32 @@ while running:
         if event.type == pygame.QUIT:
             running = False
         if event.type == pygame.KEYDOWN:
-            if event.key == pygame.K_LEFT:
-                if lastkey != "right":
+            if event.key == pygame.K_LEFT or event.key == pygame.K_a:
+                if (lastkey != "right" and lastkey != "d") and lastkey != "0":
                     lastkey = "left"
-            if event.key == pygame.K_RIGHT:
-                if lastkey != "left":
+            if event.key == pygame.K_RIGHT or event.key == pygame.K_d:
+                if lastkey != "left" and lastkey != "a":
                     lastkey = "right"
-            if event.key == pygame.K_UP:
-                if lastkey != "down":
+            if event.key == pygame.K_UP or event.key == pygame.K_w:
+                if lastkey != "down" and lastkey != "s":
                     lastkey = "up"
-            if event.key == pygame.K_DOWN:
-                if lastkey != "up":
+            if event.key == pygame.K_DOWN or event.key == pygame.K_s:
+                if lastkey != "up" and lastkey != "w":
                     lastkey = "down"
     if lastkey != "0":
         for j in range(length_snake-2):
             snakeX[length_snake-j-2] = snakeX[length_snake-j-3]
             snakeY[length_snake-j-2] = snakeY[length_snake-j-3]
-        if lastkey == "left":
+        if lastkey == "left" or lastkey == "a":
             playerX -= 20
             playerY = 20*round(playerY/20)
-        if lastkey == "right":
+        if lastkey == "right" or lastkey == "d":
             playerX += 20
             playerY = 20*round(playerY/20)
-        if lastkey == "up":
+        if lastkey == "up" or lastkey == "w":
             playerY -= 20
             playerX = 20*round(playerX/20)
-        if lastkey == "down":
+        if lastkey == "down" or lastkey == "s":
             playerY += 20
             playerX = 20*round(playerX/20)
         for t in range(len(snakeX)-1):
