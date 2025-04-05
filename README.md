@@ -1,5 +1,7 @@
 # Snake
 
+![image](https://github.com/user-attachments/assets/0f743bce-1147-448a-bc7b-24c3a868816e)
+
 _A pygame program, just the classic snake game._
 
 **Controls:**
