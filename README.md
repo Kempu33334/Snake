@@ -1,7 +1,6 @@
 # Snake
 
-_A pygame program, just the classic snake game.
-_
+_A pygame program, just the classic snake game._
 
 Controls:
 - WASD or arrow keys to move.
